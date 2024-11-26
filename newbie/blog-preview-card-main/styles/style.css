@@ -1,0 +1,160 @@
+@font-face {
+  font-family: Figtree;
+  src: url(../assets/fonts/Figtree-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: "Figtree SemiBold";
+  src: url(../assets/fonts/static/Figtree-SemiBold.ttf);
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Figtree ExtraBold";
+  src: url(../assets/fonts/static/Figtree-ExtraBold.ttf);
+  font-weight: 800;
+}
+
+:root {
+  /* Fonts */
+  --font-xs: clamp(0.625rem, 2.59vw, 0.75rem); /* 10px - 12px */
+  --font-sm: clamp(0.75rem, 3.06vw, 0.875rem); /* 12px - 14px */
+  --font-base: clamp(0.875rem, 3.53vw, 1rem); /* 14px - 16px */
+  --font-lg: clamp(1rem, 4vw, 1.125rem); /* 16px - 18px */
+  --font-xl: clamp(1.125rem, 4.47vw, 1.25rem); /* 18px - 20px */
+  --font-2xl: clamp(1.25rem, 5.18vw, 1.5rem); /* 20px - 24px */
+  /* Each vw represents the range between the specified min and max pixels. All vw are based on a 425px screen width */
+
+  /* Colors */
+  --color-yellow: hsl(47, 88%, 63%);
+
+  --color-white: hsl(0, 0%, 100%);
+
+  --color-gray-500: hsl(0, 0%, 42%);
+  --color-gray-950: hsl(0, 0%, 7%);
+}
+
+/* || RESETS */
+
+html {
+  box-sizing: border-box;
+  line-height: 1.5;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+* {
+  margin: 0;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1;
+}
+
+/* || GENERAL */
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--color-yellow);
+}
+
+.blog-card {
+  max-width: 24rem;
+  padding: 24px;
+  margin: 1.5rem;
+  background-color: var(--color-white);
+  font-size: var(--font-base);
+  font-family: Figtree;
+  color: var(--color-gray-950);
+  border: solid 1px var(--color-gray-950);
+  border-radius: 24px;
+  box-shadow: 8px 8px var(--color-gray-950);
+}
+
+.blog-card__image-container {
+  height: 201px;
+  margin-bottom: 1.5rem;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.blog-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.blog-card__tag {
+  display: inline-block;
+  font-family: "Figtree SemiBold";
+  font-size: var(--font-sm);
+  padding: 6px 14px;
+  background-color: var(--color-yellow);
+  border-radius: 4px;
+  margin-bottom: 0.75rem;
+}
+
+.blog-card__date {
+  font-size: var(--font-sm);
+  margin-bottom: 1rem;
+}
+
+.blog-card__title {
+  display: inline-block;
+  font-family: "Figtree ExtraBold";
+  font-size: var(--font-2xl);
+  margin-bottom: 1rem;
+  transition: color 200ms;
+}
+
+.blog-card__title-link:link,
+.blog-card__title-link:visited {
+  text-decoration: none;
+  color: var(--color-gray-950);
+}
+
+.blog-card__title-link:hover,
+.blog-card__title-link:active {
+  color: var(--color-yellow);
+}
+
+.blog-card__content {
+  color: var(--color-gray-500);
+  margin-bottom: 1.5rem;
+}
+
+.blog-card__author {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.blog-card__author-image {
+  width: 2rem;
+}
+
+.blog-card__author-name {
+  font-family: "Figtree SemiBold";
+}

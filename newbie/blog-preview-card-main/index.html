@@ -9,37 +9,48 @@
       sizes="32x32"
       href="./assets/images/favicon-32x32.png"
     />
+    <link rel="stylesheet" href="./styles/style.css" />
     <title>Frontend Mentor | Blog preview card</title>
   </head>
-  <body>
-    <article>
-      <header>
-        <img
-          src="./assets/images/illustration-article.svg"
-          alt="Illustration for the article"
-        />
+  <body class="container">
+    <main>
+      <article class="blog-card">
+        <header class="blog-card__header">
+          <div class="blog-card__image-container">
+            <img
+              class="blog-card__image"
+              src="./assets/images/illustration-article.svg"
+              alt="Illustration for the article"
+            />
+          </div>
 
-        <span>Learning</span>
+          <span class="blog-card__tag">Learning</span>
 
-        <p>Published <time datetime="2023-12-21">21 Dec 2023</time></p>
+          <p class="blog-card__date">
+            Published <time datetime="2023-12-21">21 Dec 2023</time>
+          </p>
 
-        <h2>HTML & CSS foundations</h2>
-      </header>
+          <a href="#" class="blog-card__title-link">
+            <h2 class="blog-card__title">HTML & CSS foundations</h2>
+          </a>
+        </header>
 
-      <p>
-        These languages are the backbone of every website, defining structure,
-        content, and presentation.
-      </p>
+        <p class="blog-card__content">
+          These languages are the backbone of every website, defining structure,
+          content, and presentation.
+        </p>
 
-      <footer>
-        <figure>
-          <img
-            src="./assets/images/image-avatar.webp"
-            alt="Avatar of Greg Hooper"
-          />
-          <figcaption>Greg Hooper</figcaption>
-        </figure>
-      </footer>
-    </article>
+        <footer class="blog-card__footer">
+          <figure class="blog-card__author">
+            <img
+              class="blog-card__author-image"
+              src="./assets/images/image-avatar.webp"
+              alt="Avatar of Greg Hooper"
+            />
+            <figcaption class="blog-card__author-name">Greg Hooper</figcaption>
+          </figure>
+        </footer>
+      </article>
+    </main>
   </body>
 </html>
